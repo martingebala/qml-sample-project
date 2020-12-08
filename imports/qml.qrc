@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>Main.qml</file>
+        <file>Measure.qml</file>
+        <file>SettingsPane.qml</file>
+        <file>Theme.qml</file>
+        <file>qmldir</file>
     </qresource>
 </RCC>

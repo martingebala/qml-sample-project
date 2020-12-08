@@ -25,6 +25,12 @@ void LinearStage::start_moving_to(double position, double speed) {
     m_target = position;
 }
 
+void LinearStage::add_waypoint(const QString &name, double position)
+{
+    m_waypoints.append(make_waypoint(name, position));
+    Q_EMIT statusChanged();
+}
+
 void LinearStage::stop() { m_target = m_position; }
 
 void LinearStage::set_waypoints(QVariantList waypoints) {

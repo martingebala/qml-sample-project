@@ -25,6 +25,7 @@ public:
         return {
             {QString("position"), QVariant::fromValue(m_position)},
             {QString("waypoints"), m_waypoints},
+            {QString("target"), QVariant::fromValue(m_target)}
         };
     }
 
@@ -36,6 +37,7 @@ Q_SIGNALS:
 public Q_SLOTS:
     // We use C++ naming style for slots to indicate we're calling into the backend from QML
     void start_moving_to(double position, double speed);
+    void add_waypoint(const QString& name, double position);
     void stop();
 
     /// Waypoints is a QVariantList of Waypoints (see make_waypoint)
