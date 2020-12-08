@@ -2,6 +2,8 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
+// Reusable pane for use in grid
+// provides a visible pane title
 Pane {
     id: root
     property string title

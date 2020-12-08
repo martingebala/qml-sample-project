@@ -63,7 +63,7 @@ ApplicationWindow {
                 id: bar
                 Layout.alignment: Qt.AlignHCenter
                 Repeater {
-                    model: 4
+                    model: 4 // 4 levels of accuracy
                     TabButton {
                         text: getAccuracyFromIndex(modelData)
                         width: implicitWidth
@@ -137,6 +137,7 @@ ApplicationWindow {
     }
 
     function getAccuracyFromIndex(index) {
+        // return one step by accuracy index (0.01,0.1 etc.)
         return 0.01 * Math.pow(10, index)
     }
 

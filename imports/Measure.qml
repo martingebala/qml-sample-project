@@ -2,6 +2,9 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
+// Measure is a visualisation of the linear stage,
+// presents actual position and allows setting new
+// target using slider
 Control {
     id: root
     horizontalPadding: Theme.spacing.large
